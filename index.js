@@ -1,8 +1,12 @@
 import express from 'express'
 import mercadopago from 'mercadopago'
 import cors from 'cors'
+import pg from 'pg'
 
 const app = express()
+new pg.Pool({
+  connectionString: 'postgres://jkz:VuPbodlDXVcVse4UjsIid0f7E6fG4KfD@dpg-cipn48d9aq0dcpr3gst0-a/backendshopping'
+})
 
 const PORT = 4000
 app.use(express.json())
